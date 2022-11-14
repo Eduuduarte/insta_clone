@@ -79,8 +79,8 @@ const Post = ({ userName, profilePic, postPhoto, caption }) => {
           <p className='text-sm text-gray-700 mt-1 my-2 m-3'>View all 327 comments</p>
         {/* Coments */}
         <div className=''>
-          {comments.map((comment) => (
-            <div className='max-w-24 overflow-y-auto flex justify-between m-3'>
+          {comments.map((comment, index) => (
+            <div key={index} className='max-w-24 overflow-y-auto flex justify-between m-3'>
               <div className='flex items-center truncate'>
                 <p className='customfont mr-2'>{comment.username}</p>
                 <p className='truncate mr-2'>{comment.comment}</p>
