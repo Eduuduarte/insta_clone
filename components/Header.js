@@ -1,5 +1,5 @@
 import Image from 'next/image';
-import React from 'react';
+import React, { useState } from 'react';
 
 import instagram from '../assets/instagram.png';
 import arrowdown from '../assets/arrowdown.png';
@@ -10,8 +10,14 @@ import upload from '../assets/upload.png';
 import discover from '../assets/discover.png';
 import hearth from '../assets/hearth.png';
 import profile from '../assets/profile.jpg';
+import { useRecoilState } from 'recoil';
+import { modalState } from '../atoms/modalState';
 
 const Header = () => {
+
+    const [open, setOpen] = useRecoilState(modalState);
+
+
     return (
         <div className='border-b shadow-sm bg-white sticky top-0 z-10'>
             <div className='flex justify-between items-center h-16 px-2 max-w-5xl mx-auto'>
@@ -42,7 +48,7 @@ const Header = () => {
                         <Image src={message} />
                         <div className='absolute flex -top-1 left-3.5 items-center justify-center bg-red-500 text-white rounded-full w-4 h-4 text-xs'>1</div>
                     </div>
-                    <div className='Btn'>
+                    <div className='Btn' onClick={() => setOpen(!open)}>
                         <Image src={upload} />
                     </div>
                     <div className='Btn hidden sm:flex'>
