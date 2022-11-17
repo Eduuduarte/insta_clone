@@ -3,10 +3,11 @@ import '../styles/globals.css'
 
 function MyApp({ Component, pageProps }) {
 
-  return
+  return(
   <RecoilRoot>
     <Component {...pageProps} />
   </RecoilRoot>
+  );
 }
 
 export default MyApp
