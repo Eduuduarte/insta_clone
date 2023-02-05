@@ -11,5 +11,12 @@ npx create-next-app INSTA
 
 ~~~
 
+### Dependecies
+
+#### Recoil
+
+~~~node
+npm install recoil
+~~~
 
 ### Project
