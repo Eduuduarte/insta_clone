@@ -2,7 +2,6 @@ import { RecoilRoot } from 'recoil'
 import '../styles/globals.css'
 
 function MyApp({ Component, pageProps }) {
-
   return(
   <RecoilRoot>
     <Component {...pageProps} />
@@ -10,4 +9,4 @@ function MyApp({ Component, pageProps }) {
   );
 }
 
-export default MyApp
+export default MyApp;
